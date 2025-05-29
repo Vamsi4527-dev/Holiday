@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telugu Beats - Telugu Music Streaming</title>
+    <link rel="stylesheet" href="holiday4.css">
+</head>
+<body>
+    <div class="container">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-image">TB</div>
+                <h1>Telugu Beats</h1>
+                <p>Your Music, Your World</p>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#" class="active">🏠 Home</a></li>
+                <li><a href="#">🔍 Search</a></li>
+                <li><a href="#">📚 Your Library</a></li>
+                <li><a href="#">❤️ Liked Songs</a></li>
+                <li><a href="#">📻 Radio</a></li>
+                <li><a href="#">🎯 Made For You</a></li>
+            </ul>
+            
+            <div class="playlist-section">
+                <h3>Your Playlists</h3>
+                <div class="playlist-item">🎬 Movie Hits</div>
+                <div class="playlist-item">💕 Love Songs</div>
+                <div class="playlist-item"><a style="color:black;text-decoration:none;" href="#yours_uploads">
+                📤Your Uploads</a></div>
+                <div class="playlist-item"><a style="color:black;text-decoration:none;"
+                    href="#about">👤 About</a></div>
+            </div>
+        </div>
+
+        <!-- main content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="search-container">
+                    <input type="text" placeholder="Search Telugu songs, artists, movies..." id="searchInput">
+                    <span style="color: #8b4513; font-size: 18px; margin-left: 10px;">🔍</span>
+                </div>
+                <div class="user-profile">
+                    <span style="margin-right: 10px;">👤</span>
+                    <span>Telugu Music Lover</span>
+                </div>
+            </div>
+
+            <div class="featured-banner">
+                <h2>Welcome to Telugu Beats</h2>
+                <p>Discover the best Telugu music from classics to latest hits</p>
+            </div>
+
+            <!-- Upload Section -->
+            <div class="section">
+                <h2>🎵 Upload Your Music</h2>
+                <div class="file-upload">
+                    <input type="file" id="audioFile" accept=".mp3,.wav,.ogg" multiple>
+                    <button class="upload-btn" onclick="uploadAudio()">Upload Audio Files</button>
+                    <p style="margin-top: 10px; color: #8b4513; font-size: 14px;">
+                        Supported formats: MP3, WAV, OGG
+                    </p>
+                </div>
+            </div>
+
+            <!-- popular telugu songs -->
+            <div class="section">
+                <h2>🔥 Popular Telugu Songs</h2>
+                <div class="song-grid" id="popularSongs">
+                    <div class="song-card" data-audio="./path/to/your/audio1.mp3">
+                        <div class="song-image"></div>
+                        <div class="song-info">
+                            <h3>Butta Bomma</h3>
+                            <p>Singer: Armaan Malik</p>
+                            <p>Movie: Ala Vaikunthapurramuloo</p>
+                        </div>
+                        <button class="play-btn" onclick="playSong(this.parentElement)">▶️</button>
+                    </div>
+                    
+                    <div class="song-card" data-audio="./path/to/your/audio2.mp3">
+                        <div class="song-image"></div>
+                        <div class="song-info">
+                            <h3>Ramuloo Ramulaa</h3>
+                            <p>Singer: Anirudh Ravichander</p>
+                            <p>Movie: Ala Vaikunthapurramuloo</p>
+                        </div>
+                        <button class="play-btn" onclick="playSong(this.parentElement)">▶️</button>
+                    </div>
+
+                    <div class="song-card" data-audio="./path/to/your/audio3.mp3">
+                        <div class="song-image"></div>
+                        <div class="song-info">
+                            <h3>Yenti Yenti</h3>
+                            <p>Singer: Sid Sriram</p>
+                            <p>Movie: Geetha Govindam</p>
+                        </div>
+                        <button class="play-btn" onclick="playSong(this.parentElement)">▶️</button>
+                    </div>
+
+                    <div class="song-card" data-audio="./path/to/your/audio4.mp3">
+                        <div class="song-image"></div>
+                        <div class="song-info">
+                            <h3>Vachinde</h3>
+                            <p>Singer: Madhu Priya</p>
+                            <p>Movie: Fidaa</p>
+                        </div>
+                        <button class="play-btn" onclick="playSong(this.parentElement)">▶️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- user uploaded songs -->
+            <div class="section" id="yours_uploads">
+                <h2>📱 Your Uploaded Songs</h2>
+                <div class="song-grid" id="uploadedSongs">
+                    <!-- uploaded songs will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- music player -->
+    <div class="music-player">
+        <div class="now-playing">
+            <div class="now-playing-image">🎵</div>
+            <div class="now-playing-info">
+                <h4 id="currentSong">Select a song to play</h4>
+                <p id="currentArtist">Telugu Beats</p>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <button class="control-btn" onclick="previousSong()">⏮️</button>
+            <button class="control-btn play-pause" onclick="togglePlay()" id="playPauseBtn">▶️</button>
+            <button class="control-btn" onclick="nextSong()">⏭️</button>
+        </div>
+
+        <div class="progress-container">
+            <div class="time-info">
+                <span id="currentTime">0:00</span>
+                <span id="totalTime">0:00</span>
+            </div>
+            <div class="progress-bar" onclick="seekSong(event)">
+                <div class="progress" id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="volume-container">
+            <span style="color: #8b4513;">🔊</span>
+            <input type="range" class="volume-slider" min="0" max="100" value="70" id="volumeSlider" onchange="changeVolume()">
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="about">
+        <p>&copy; 2025 JobFinder. All rights reserved.</p>
+    </footer>
+
+    <!-- hidden audio element -->
+    <audio id="audioPlayer" preload="metadata"></audio>
+    <script src="holiday4.js"></script>
+</body>
+</html>
