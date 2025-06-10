@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+
+<body>
+    <div id="calculator">
+        <h1>Calculator</h1>
+        <input id="display" readonly><hr>
+        <div id="button-grid">
+            <button style="color:rgba(0, 0, 255, 0.719)" onclick="clearDisplay()"><b>AC</b></button>
+            <button style="color:rgba(0, 0, 255, 0.719)" onclick="deleteLastChar()"><b>DE</b></button>
+            <button style="color:rgba(0, 0, 255, 0.719)" onclick="toggleSign()"><b>+/-</b></button>
+            <button style="color:rgba(0, 0, 255, 0.719)" onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('7')"><b>7</b></button>
+            <button onclick="appendToDisplay('8')"><b>8</b></button>
+            <button onclick="appendToDisplay('9')"><b>9</b></button>
+            <button style="color:rgba(0, 0, 255, 0.719)" onclick="appendToDisplay('*')"><b>x</b></button>
+            <button onclick="appendToDisplay('4')"><b>4</b></button>
+            <button onclick="appendToDisplay('5')"><b>5</b></button>
+            <button onclick="appendToDisplay('6')"><b>6</b></button>
+            <button style="color:rgba(0, 0, 255, 0.719)" onclick="appendToDisplay('-')"><b>-</b></button>
+            <button onclick="appendToDisplay('1')"><b>1</b></button>
+            <button onclick="appendToDisplay('2')"><b>2</b></button>
+            <button onclick="appendToDisplay('3')"><b>3</b></button>
+            <button style="color:rgba(0, 0, 255, 0.719)" onclick="appendToDisplay('+')"><b>+</b></button>
+           
+            <button onclick="appendToDisplay('%')"><b>%</b></button>
+            <button onclick="appendToDisplay('0')"><b>0</b></button>
+            <button onclick="appendToDisplay('.')"><b>.</b></button>
+            <button style="color: #02ff0a" onclick="calculate()"class="btn"><b>=</b></button>
+        </div>
+    </div>
+    <script src="task2.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <div id="calculator">
+        <input id="display">
+        <div id="buttons">
+            <button class="operator" onclick="clearDisplay()">AC</button>
+            <button class="operator" onclick="deleteLastChar()">DE</button>
+            <button class="operator" onclick="toggleSign()">+/-</button>
+            <button class="operator" onclick="appendToDisplay('/')">/</button>
+            
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="appendToDisplay('*')">×</button>
+
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operator" onclick="appendToDisplay('-')">-</button>
+            
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="operator" onclick="appendToDisplay('+')">+</button>
+            
+            <button onclick="appendToDisplay('%')">%</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button class="equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="task2.js"></script>
+</body>
+</html>-->

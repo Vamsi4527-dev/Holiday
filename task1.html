@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Gallery</title>
+ <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Beautiful Gallery</h1>
+            <div class="filter">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Places</button>
+                <button class="filter-btn">People</button>
+            </div>
+        </header>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=1" alt="Image 1">
+                <div class="info">
+                    <h3>Mountain View</h3>
+                    <p>Beautiful landscape with snow peaks</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=2" alt="Image 2">
+                <div class="info">
+                    <h3>City Lights</h3>
+                    <p>Urban nightlife and bright colors</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=3" alt="Image 3">
+                <div class="info">
+                    <h3>Ocean Waves</h3>
+                    <p>Peaceful blue water and sandy beach</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=4" alt="Image 4">
+                <div class="info">
+                    <h3>Forest Path</h3>
+                    <p>Green trees and natural walking trail</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=5" alt="Image 5">
+                <div class="info">
+                    <h3>Sunset Sky</h3>
+                    <p>Orange and pink clouds at evening</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=6" alt="Image 6">
+                <div class="info">
+                    <h3>Desert Sand</h3>
+                    <p>Golden dunes under clear blue sky</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=7" alt="Image 7">
+                <div class="info">
+                    <h3>River Flow</h3>
+                    <p>Fresh water flowing through rocks</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=8" alt="Image 8">
+                <div class="info">
+                    <h3>Flower Garden</h3>
+                    <p>Colorful blooms in spring season</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/300/200?random=9" alt="Image 9">
+                <div class="info">
+                    <h3>Snow Field</h3>
+                    <p>White winter landscape with trees</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <button class="close-btn" onclick="closeLightbox()">&times;</button>
+            <button class="nav-btn prev-btn" onclick="changeImage(-1)">&#8249;</button>
+            <button class="nav-btn next-btn" onclick="changeImage(1)">&#8250;</button>
+        </div>
+    </div>
+<script src="task1.js"></script>
+</body>
+</html>
